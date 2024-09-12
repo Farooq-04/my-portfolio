@@ -65,6 +65,9 @@
             margin: 10px 0;
             color:#ffd700;
         }
+        .ham-menu{
+            display: none;
+        }
         
         p {
             max-width: 600px;
@@ -159,21 +162,57 @@
     
     font-size: 40px;
 }
+.logo{
+    display: none;
+}
 .social-icons a:hover {
     background-color: transparent;
+    transition: 0.3s;
+    transform: scale(1.4) translateY(-3px);
     color:purple;
-    box-shadow: 0 0 12px purple;
+    filter: drop-shadow(0 0 19px purple);
 }
 @media screen and (max-width: 600px) {
     .nav-bar {
         justify-content: space-around;
     }
+    .nav-bar{
+        display:none;
+       
+        
+    }
     .nav-bar a {
         padding: 10px 12px;
-        font-size: 14px;
+        font-size: 14px;border: 0px;
+    }
+    .ham-menu{
+        display: none;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: left;
+        margin-right: 50%;
+        position: absolute;
+        top: 39px;
+    }
+    .logo{
+        display: flex;
+        float: left;
+        margin-top: 10px;
+        margin-left: 10px;
+        width: 20px;
+    }
+    .ham-menu a{
+        text-decoration: none;
+        color:white;
+        font-weight: bold;
     }
     .social-icons {
         justify-content: space-around;
+        padding: 0%;
+    }
+    .contact-section{
+        padding: 0%;
     }
     .social-icons a {
         padding: 10px 12px;
@@ -184,12 +223,19 @@
 </head>
 <body>
    <div id="gg" class="nav">
+    <img class="logo" onclick="see()" src="gg.png" alt="">
     <nav class="nav-bar">
         <a  href="index.html">HOME</a>
         <a href="#about-me">ABOUT_ME</a>
         <a href="#education">EDUCATION</a>
         <a href="#contact">CONTACT</a>
     </nav>
+    <div class="ham-menu" id="gg">
+        <a  href="index.html">HOME</a>
+        <a href="#about-me">ABOUT_ME</a>
+        <a href="#education">EDUCATION</a>
+        <a href="#contact">CONTACT</a>
+    </div>
 </div>
     <div class="container">
         <h2 class="name">SHAIK MOHAMMED FAROOQ</h2>
@@ -214,15 +260,22 @@
             <p>NUCLEUS JR COLLEGE, 2019 - 2021</p>
             <p>Percentage: 89%</p>
         </div>
-      
+        <div class="course">
+            <h3 class="">Secondary Education</h3>
+            <p>ST.ANNE'S HIGH SCHOOL, 2019 </p>
+            <p>Percentage: 92%</p>
+        </div>
+     </div>
+   
     </div>
     </section>
     <section id="skills-interests">
-        <h2>Skill & Interest</h2>
+        <h2>Skills & Interests</h2>
         <ul>
             <li>Java full Stack</li>
             <li>Web development</li>
             <li>Python</li>
+            <li>Microsoft Excel,Word,Powerpoint etc</li>
         </ul>
     </section>
 
@@ -240,5 +293,6 @@
     <footer>
         PORTFOLIO 2024 
     </footer>
+    <script src="ff.js"></script>
 </body>
 </html>
